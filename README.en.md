@@ -2,10 +2,10 @@
   <img src="assets/readme/ll2-wordmark.svg" width="640" alt="LL2.cn — High-performance, lightweight, AI-native video workspace">
 </p>
 
-<p align="center"><strong>High-performance · Lightweight · AI Native</strong></p>
+<p align="center"><strong>Lightweight · Fluid · Made for Creation</strong></p>
 
 <p align="center">
-  An AI-native workspace for video creation.<br>
+  An AI-native workspace for video creation · <strong>BeefTV LL2 Edition</strong>.<br>
   Connect ideas, models, and media on one freeform canvas.
 </p>
 
@@ -51,15 +51,15 @@
 
 [All releases and detailed notes](https://github.com/glanderness/BeefTV/releases)
 
-## Special thanks
+## About the BeefTV LL2 Edition
 
-Thank you to the partners, sponsors, and customers supporting BeefTV's continued development.
+The **BeefTV LL2 Edition** is built by LL2 on top of BeefTV. BeefTV and its open source community provide the workspace, Agent, and canvas capabilities that form the foundation of this edition; all related intellectual property belongs to the original authors.
 
 <table>
-  <tr><th width="26%" align="center">Acknowledgements</th><th align="center">About</th></tr>
+  <tr><th width="26%" align="center">Service</th><th align="center">About</th></tr>
   <tr>
     <td align="center" valign="middle"><img src="assets/readme/partner-ll2.png" width="32" height="32" alt="ll2.cn icon"><br><strong>ll2.cn</strong></td>
-    <td><a href="https://hub.ll2.cn?p=rw6t">ll2.cn</a> | Self-operated compute infrastructure · Direct official contracts at wholesale rates. MiniMax-H3 at CNY 0.05/second (self-hosted, full-capability 768P); deepseek-v4.1-flash at 40% of the official price; Seedance series from 30% off; super-resolution at CNY 0.018/second; Vega series from 40% off.</td>
+    <td>We run our own compute infrastructure and work directly with official channels to keep model calls stable and affordable for creators — MiniMax-H3 at CNY 0.05/second (self-hosted, full-capability 768P), deepseek-v4.1-flash at 40% of the official price, Seedance series from 30% off, super-resolution at CNY 0.018/second, and Vega series from 40% off. See <a href="https://hub.ll2.cn?p=rw6t">ll2.cn</a> for details.</td>
   </tr>
 </table>
 
@@ -162,7 +162,7 @@ BeefTV also includes project and personal asset libraries, asynchronous tasks, m
 ## Get started
 
 1. [Download the desktop app](https://github.com/glanderness/BeefTV/releases/latest) and follow the [first-launch instructions](QUICKSTART.md#下载与首次打开). Enter your local workspace without signing up.
-2. In model settings, connect your BeefTV account or add your own model provider.
+2. In model settings, add your own model provider; LL2 compute services are supported.
 3. Create a canvas, add reference media, and describe your goal to the creative assistant. You can also start creating directly with nodes.
 
 See [Quick Start](QUICKSTART.md) for model setup and building from source, and the [desktop release guide](docs/desktop-release.md) for packaging requirements.
@@ -199,4 +199,4 @@ We thank these projects' authors, maintainers, and contributors for their founda
 
 ---
 
-> This project is an LL2 edition, built upon BeefTV. All related intellectual property belongs to the original authors.
+> The **BeefTV LL2 Edition** is built upon BeefTV. All related intellectual property belongs to the original authors.
