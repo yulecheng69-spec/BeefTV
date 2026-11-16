@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/readme/beeftv-wordmark.svg" width="640" alt="BeefTV — High-performance, lightweight, AI-native video workspace">
+  <img src="assets/readme/ll2-wordmark.svg" width="640" alt="LL2.cn — High-performance, lightweight, AI-native video workspace">
 </p>
 
 <p align="center"><strong>High-performance · Lightweight · AI Native</strong></p>
@@ -45,9 +45,9 @@
 
 - **[v2.2.5](https://github.com/glanderness/BeefTV/releases/tag/v2.2.5)** — 修复画布上传完成后偶发回退「上传中」与替换素材被旧任务覆盖，修复桌面端资源缩略图、独立分镜生成与批量下载编号，升级视频原生截帧与音视频分离，放开内置助手选用大型技能的大小与数量限制并支持长文档按行分段读取。
 - **[v2.2.4](https://github.com/glanderness/BeefTV/releases/tag/v2.2.4)** — 修复桌面端 Eagle 素材库预览与导入下载，支持自定义模型服务无 `/v1` 前缀地址与手动模型改删，修复提示词长按退格、个人资产库分页计数与生成历史本地视频预览。
-- **[v2.2.3](https://github.com/glanderness/BeefTV/releases/tag/v2.2.3)** — 接入 Seedream 5.5 图片生成与细粒度图层拆分，优化画布视频首尾帧自动识别与参考预检，修复超分与去字幕终态重试及诊断耗时显示，并补充银盛云枢壹算品牌图标与简介。
+- **[v2.2.3](https://github.com/glanderness/BeefTV/releases/tag/v2.2.3)** — 接入 Seedream 5.5 图片生成与细粒度图层拆分，优化画布视频首尾帧自动识别与参考预检，修复超分与去字幕终态重试及诊断耗时显示。
 - **[v2.2.2](https://github.com/glanderness/BeefTV/releases/tag/v2.2.2)** — 上线实时余额与在线充值，完善生成费用预估，升级 DeepSeek Harness 协同与画布视频处理。
-- **[v2.2.1](https://github.com/glanderness/BeefTV/releases/tag/v2.2.1)** — 新增银盛云枢壹算渠道插件，改版插件与账户设置，改善画布预览及生成报错与重试。
+- **[v2.2.1](https://github.com/glanderness/BeefTV/releases/tag/v2.2.1)** — 改版插件与账户设置，改善画布预览及生成报错与重试。
 
 [查看全部版本与详细说明](https://github.com/glanderness/BeefTV/releases)
 
@@ -60,22 +60,6 @@
   <tr>
     <td align="center" valign="middle"><img src="assets/readme/partner-ll2.png" width="32" height="32" alt="ll2.cn 图标"><br><strong>ll2.cn</strong></td>
     <td><a href="https://hub.ll2.cn?p=rw6t">ll2.cn</a>｜自营算力底座 · 官方直签批价。MiniMax-H3 0.05 元/秒（自部署 768P 满血）；deepseek-v4.1-flash 官方 4 折；Seedance 系列 7 折起；超分 0.018 元/秒；Vega系列 6折起。</td>
-  </tr>
-  <tr>
-    <td align="center" valign="middle"><img src="assets/readme/partner-ysdui.png" width="32" height="32" alt="银盛·云枢壹算图标"><br><strong>银盛·云枢壹算</strong></td>
-    <td><a href="https://www.ysdui.cn/">银盛·云枢壹算</a>是银盛通信有限公司旗下的企业级一站式 AI 服务平台，为企业提供算力支持与 AI 产品解决方案。感谢银盛·云枢壹算为本项目提供的算力支持与生态扶持。</td>
-  </tr>
-  <tr>
-    <td align="center" valign="middle"><img src="assets/readme/partner-tencent-cloud.png" width="32" height="32" alt="腾讯云图标"><br><strong>腾讯云</strong></td>
-    <td><a href="https://cloud.tencent.com/">腾讯云</a>提供云计算、人工智能与音视频服务，覆盖媒体存储、处理和分发等场景，服务开发者与企业的应用建设。感谢腾讯云为本项目提供的算力支持以及生态扶持。</td>
-  </tr>
-  <tr>
-    <td align="center" valign="middle"><img src="assets/readme/partner-byteplus.png" width="32" height="32" alt="BytePlus 图标"><br><strong>BytePlus</strong></td>
-    <td><a href="https://www.byteplus.com/en">BytePlus</a> 源自字节跳动的企业技术服务品牌，面向全球企业提供生成式 AI、云基础设施与音视频解决方案。感谢 BytePlus 海外孵化器对本项目的算力支持与生态扶持。</td>
-  </tr>
-  <tr>
-    <td align="center" valign="middle"><img src="assets/readme/partner-pccooler.png" width="120" alt="超频三标志"><br><strong>超频三</strong></td>
-    <td><a href="https://www.cpspccooler.cn/">超频三</a>是深耕高性能计算硬件与散热系统的上市公司，提供 AI 模组化整机、AI 工作站等产品。结合超频三的硬件研发能力与 BeefTV 的 AIGC 软件生态，双方将共同探索软硬件一体化的本地 AI 创作解决方案。</td>
   </tr>
 </table>
 
@@ -214,3 +198,7 @@ BeefTV 的开发基于并参考了以下开源项目与技术：
     <img alt="BeefTV GitHub Star History" src="https://api.star-history.com/chart?repos=glanderness/BeefTV&amp;type=date&amp;legend=bottom-right" />
   </picture>
 </a>
+
+---
+
+> 本项目为 LL2 专版，基于 BeefTV 构建，相关知识产权归原作者所有。

@@ -55,7 +55,8 @@ func registerDesktopCanvasAPI(api *gin.RouterGroup, svc *app.Service, dependenci
 	api.Use(SupportTracingMiddleware(svc))
 	RegisterOpenAPIRoutes(api)
 	RegisterWorkspaceRoutes(api, svc)
-	RegisterBeefTVConnectionRoutes(api, svc)
+	// 本地版本：不注册官方账号/设备码授权/钱包路由（/api/beeftv/connection/*）。
+	// 保留 internal/beeftv 包本身，生成与媒体逻辑仍依赖它；仅关闭对外的登录入口。
 	RegisterDesktopAppearanceRoutes(api, svc)
 	RegisterDesktopFeatureAvailabilityRoutes(api, svc)
 	// 旧内置 Agent 已从产品运行面退场：这里不再注册 /agent/*，运行、审批和记忆入口

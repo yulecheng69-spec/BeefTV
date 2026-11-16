@@ -7,16 +7,8 @@ import {
     buildLL2ModelChannel,
     upgradeLL2ModelProfile,
 } from "../../../plugin-packages/beeftv-plugin-ll2/client/index.js";
-import {
-    DEFAULT_BASE_URL as YSDUI_DEFAULT_BASE_URL,
-    YSDUI_CHANNEL_ID,
-    YSDUI_PRESET_MODELS,
-    YSDUI_PROVIDER_INTRO,
-    buildYsduiModelChannel,
-    upgradeYsduiModelProfile,
-} from "../../../plugin-packages/beeftv-plugin-ysdui/client/index.js";
 
-type BuiltinPresetModel = (typeof LL2_PRESET_MODELS)[number] | (typeof YSDUI_PRESET_MODELS)[number];
+type BuiltinPresetModel = (typeof LL2_PRESET_MODELS)[number];
 
 export type BuiltinModelProfile = {
     model: string;
@@ -62,18 +54,6 @@ export const BUILTIN_PRESETS: Record<string, BuiltinPresetPlugin> = {
         declaresReferenceMediaTransport: false,
         buildChannel: (args) => buildLL2ModelChannel({ apiKey: args.apiKey, baseUrl: args.baseUrl, selectedModels: args.selectedModels }),
         upgradeProfile: (profile) => upgradeLL2ModelProfile(profile),
-    },
-    [YSDUI_CHANNEL_ID]: {
-        protocolPrefixes: ["ysdui-"],
-        hosts: [new URL(YSDUI_DEFAULT_BASE_URL).hostname, "ysdui.cn"],
-        hostSuffixes: [".ysdui.cn"],
-        candidates: TEXT_AUDIO_CANDIDATES,
-        models: YSDUI_PRESET_MODELS,
-        presetDescription: "文本、图像与视频",
-        providerIntro: YSDUI_PROVIDER_INTRO,
-        declaresReferenceMediaTransport: true,
-        buildChannel: (args) => buildYsduiModelChannel({ apiKey: args.apiKey, baseUrl: args.baseUrl, selectedModels: args.selectedModels, existingChannel: args.existingChannel }),
-        upgradeProfile: (profile) => upgradeYsduiModelProfile(profile),
     },
 };
 

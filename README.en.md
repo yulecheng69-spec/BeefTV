@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/readme/beeftv-wordmark.svg" width="640" alt="BeefTV — High-performance, lightweight, AI-native video workspace">
+  <img src="assets/readme/ll2-wordmark.svg" width="640" alt="LL2.cn — High-performance, lightweight, AI-native video workspace">
 </p>
 
 <p align="center"><strong>High-performance · Lightweight · AI Native</strong></p>
@@ -45,9 +45,9 @@
 
 - **[v2.2.5](https://github.com/glanderness/BeefTV/releases/tag/v2.2.5)** — Fix canvas uploads reverting to uploading overlays and replaced nodes being overwritten by stale tasks, fix desktop resource thumbnails, standalone storyboard generation, and batch download numbering, upgrade native video frame extraction and audio separation, and lift assistant skill size and count limits with paged line-by-line long-document reading.
 - **[v2.2.4](https://github.com/glanderness/BeefTV/releases/tag/v2.2.4)** — Fix Eagle library previews and downloads on desktop, support prefixless custom model URLs and editing/deleting manual models, and fix prompt backspace editing, asset library pagination counts, and local video previews in generation history.
-- **[v2.2.3](https://github.com/glanderness/BeefTV/releases/tag/v2.2.3)** — Add Seedream 5.5 image generation and fine-grained layer splitting, improve automatic first/last frame assignment and reference checks, fix upscale and subtitle-removal retry states and diagnostics, and add Yinsheng Yunshu Yisuan branding.
+- **[v2.2.3](https://github.com/glanderness/BeefTV/releases/tag/v2.2.3)** — Add Seedream 5.5 image generation and fine-grained layer splitting, improve automatic first/last frame assignment and reference checks, fix upscale and subtitle-removal retry states and diagnostics.
 - **[v2.2.2](https://github.com/glanderness/BeefTV/releases/tag/v2.2.2)** — Add live balances and online top-ups, refine generation cost estimates, and upgrade DeepSeek Harness collaboration and canvas video processing.
-- **[v2.2.1](https://github.com/glanderness/BeefTV/releases/tag/v2.2.1)** — Add the Yinsheng Yunshu Yisuan provider plugin, redesign plugin and account settings, and improve canvas previews, generation errors, and retries.
+- **[v2.2.1](https://github.com/glanderness/BeefTV/releases/tag/v2.2.1)** — Redesign plugin and account settings, and improve canvas previews, generation errors, and retries.
 
 [All releases and detailed notes](https://github.com/glanderness/BeefTV/releases)
 
@@ -60,22 +60,6 @@ Thank you to the partners, sponsors, and customers supporting BeefTV's continued
   <tr>
     <td align="center" valign="middle"><img src="assets/readme/partner-ll2.png" width="32" height="32" alt="ll2.cn icon"><br><strong>ll2.cn</strong></td>
     <td><a href="https://hub.ll2.cn?p=rw6t">ll2.cn</a> | Self-operated compute infrastructure · Direct official contracts at wholesale rates. MiniMax-H3 at CNY 0.05/second (self-hosted, full-capability 768P); deepseek-v4.1-flash at 40% of the official price; Seedance series from 30% off; super-resolution at CNY 0.018/second; Vega series from 40% off.</td>
-  </tr>
-  <tr>
-    <td align="center" valign="middle"><img src="assets/readme/partner-ysdui.png" width="32" height="32" alt="Yinsheng Yunshu Yisuan icon"><br><strong>银盛·云枢壹算</strong></td>
-    <td><a href="https://www.ysdui.cn/">Yinsheng Yunshu Yisuan</a> is a one-stop enterprise AI services platform under Yinsheng Communications Co., Ltd., providing compute resources and AI product solutions for businesses. Special thanks to Yinsheng Yunshu Yisuan for its compute resources and ecosystem support for this project.</td>
-  </tr>
-  <tr>
-    <td align="center" valign="middle"><img src="assets/readme/partner-tencent-cloud.png" width="32" height="32" alt="Tencent Cloud icon"><br><strong>Tencent Cloud</strong></td>
-    <td><a href="https://cloud.tencent.com/">Tencent Cloud</a> provides cloud computing, AI, and audio and video services, including media storage, processing, and delivery, for developers and enterprises. Special thanks to Tencent Cloud for its compute resources and ecosystem support for this project.</td>
-  </tr>
-  <tr>
-    <td align="center" valign="middle"><img src="assets/readme/partner-byteplus.png" width="32" height="32" alt="BytePlus icon"><br><strong>BytePlus</strong></td>
-    <td><a href="https://www.byteplus.com/en">BytePlus</a> draws on ByteDance's technology to offer generative AI, cloud infrastructure, and audio and video solutions to enterprises worldwide. Special thanks to the BytePlus Overseas Incubator for its compute resources and ecosystem support for this project.</td>
-  </tr>
-  <tr>
-    <td align="center" valign="middle"><img src="assets/readme/partner-pccooler.png" width="120" alt="PCCOOLER logo"><br><strong>PCCOOLER</strong></td>
-    <td><a href="https://www.cpspccooler.cn/">PCCOOLER</a> is a publicly listed company specializing in high-performance computing hardware and cooling systems, with products including modular AI PCs and AI workstations. Combining PCCOOLER's hardware R&amp;D capabilities with BeefTV's AIGC software ecosystem, the two teams will explore integrated hardware and software solutions for local AI creation.</td>
   </tr>
 </table>
 
@@ -212,3 +196,7 @@ We thank these projects' authors, maintainers, and contributors for their founda
     <img alt="BeefTV GitHub star history" src="https://api.star-history.com/chart?repos=glanderness/BeefTV&amp;type=date&amp;legend=bottom-right" />
   </picture>
 </a>
+
+---
+
+> This project is an LL2 edition, built upon BeefTV. All related intellectual property belongs to the original authors.

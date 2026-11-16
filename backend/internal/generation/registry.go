@@ -155,7 +155,7 @@ func LoadOfficialFallbackRegistry() *protocol.Registry {
 			return
 		}
 		adapters := make([]protocol.Adapter, 0, len(entries)+2)
-		for _, builtinPluginName := range []string{"beeftv-plugin-ll2", "beeftv-plugin-ysdui"} {
+		for _, builtinPluginName := range []string{"beeftv-plugin-ll2"} {
 			for _, builtinDir := range officialBundledPluginDirCandidates(directory, builtinPluginName) {
 				info, statErr := os.Stat(builtinDir)
 				if statErr != nil || !info.IsDir() {

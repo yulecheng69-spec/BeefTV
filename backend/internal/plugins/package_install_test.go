@@ -395,7 +395,7 @@ func TestBuiltinLL2PluginPreinstalledAndRegistersProviders(t *testing.T) {
 	defer capability.BuiltinRegistry().ResetPluginDescriptors()
 	svc := New(rt, nil)
 
-	for _, builtinID := range []string{"beeftv-plugin-ll2", "beeftv-plugin-ysdui"} {
+	for _, builtinID := range []string{"beeftv-plugin-ll2"} {
 		view, ok := ByID(svc.List(), builtinID)
 		if !ok {
 			t.Fatalf("expected %s to be pre-installed by default", builtinID)
@@ -409,27 +409,6 @@ func TestBuiltinLL2PluginPreinstalledAndRegistersProviders(t *testing.T) {
 	}
 
 	reg := svc.Registry()
-	syncImageAdapter, resolved := reg.Resolve("ysdui-image")
-	if !resolved {
-		t.Fatal("expected provider ysdui-image from beeftv-plugin-ysdui to be registered in protocol registry")
-	}
-	syncSpec, err := syncImageAdapter.BuildCreate(context.Background(), protocol.RequestContext{
-		BaseURL: "https://tokenhub.ysdui.cn",
-		Request: protocol.GenerationRequest{
-			Model:       "doubao-seedream-5-0-260128",
-			Prompt:      "a minimalist ink mountain",
-			AspectRatio: "16:9",
-			Quality:     "2k",
-			ImageCount:  1,
-		},
-	})
-	if err != nil || syncSpec.Path != "/v1/images/generations" {
-		t.Fatalf("BuildCreate(ysdui-image) path=%q err=%v", syncSpec.Path, err)
-	}
-	syncCreated, err := syncImageAdapter.ParseCreate(context.Background(), []byte(`{"created":1,"data":[{"url":"https://cdn.example.com/out.png"}]}`))
-	if err != nil || syncCreated.Status != protocol.StatusSucceeded || len(syncCreated.Result.Images) != 1 {
-		t.Fatalf("ParseCreate(ysdui-image) unexpected: status=%q images=%v err=%v", syncCreated.Status, syncCreated.Result, err)
-	}
 
 	cases := []struct {
 		providerID   string
@@ -495,28 +474,6 @@ func TestBuiltinLL2PluginPreinstalledAndRegistersProviders(t *testing.T) {
 			createJSON:   `{"task_id":"hd-1","status":"created"}`,
 			wantTaskID:   "hd-1",
 			pollJSON:     `{"task_id":"hd-1","status":"finished","url":"https://cdn.example.com/e.mp4"}`,
-			wantKind:     "video",
-		},
-		{
-			providerID:   "ysdui-image-task",
-			baseURL:      "https://tokenhub.ysdui.cn",
-			req:          protocol.GenerationRequest{Model: "wand-vega-image-flash", Prompt: "hello", AspectRatio: "1:1", Quality: "1k"},
-			wantPath:     "/v1/images/tasks",
-			wantPollPath: "/v1/images/tasks/task-img-1",
-			createJSON:   `{"code":"success","data":{"task_id":"task-img-1"}}`,
-			wantTaskID:   "task-img-1",
-			pollJSON:     `{"code":"success","data":{"task_id":"task-img-1","status":"SUCCESS","content":{"image_url":[{"url":"https://cdn.example.com/vega.png"}]}}}`,
-			wantKind:     "image",
-		},
-		{
-			providerID:   "ysdui-video",
-			baseURL:      "https://tokenhub.ysdui.cn",
-			req:          protocol.GenerationRequest{Model: "doubao-seedance-2-0-260128", Prompt: "hello", Duration: 5, AspectRatio: "16:9", Resolution: "720p"},
-			wantPath:     "/v1/video/generations",
-			wantPollPath: "/v1/video/generations/cgt-ys-1",
-			createJSON:   `{"code":"success","data":{"task_id":"cgt-ys-1"}}`,
-			wantTaskID:   "cgt-ys-1",
-			pollJSON:     `{"code":"success","data":{"task_id":"cgt-ys-1","status":"SUCCESS","data":{"id":"cgt-ys-1","status":"succeeded","content":{"video_url":"https://cdn.example.com/ys.mp4"}}}}`,
 			wantKind:     "video",
 		},
 	}
@@ -631,7 +588,6 @@ func TestBundledPluginDirsManifestAndDesktopAgentHostResolution(t *testing.T) {
 	wantNames := map[string]bool{
 		"beeftv-plugin-market": false,
 		"beeftv-plugin-ll2":    false,
-		"beeftv-plugin-ysdui":  false,
 	}
 	for _, name := range names {
 		if _, ok := wantNames[name]; !ok {
@@ -735,7 +691,7 @@ func TestBundledPluginDirsManifestAndDesktopAgentHostResolution(t *testing.T) {
 			svc := New(rt, nil)
 			svc.SetPackageFetcher(copyPackageFetcher)
 
-			for _, builtinID := range []string{"beeftv-plugin-market", "beeftv-plugin-ll2", "beeftv-plugin-ysdui"} {
+			for _, builtinID := range []string{"beeftv-plugin-market", "beeftv-plugin-ll2"} {
 				builtinView, found := ByID(svc.List(), builtinID)
 				if !found {
 					t.Fatalf("%s was not loaded from agent-host/bundled-plugins", builtinID)

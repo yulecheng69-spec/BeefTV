@@ -60,7 +60,10 @@ export function ChannelSettingsPane({ onOpenDiagnostics, onOpenModels }: Channel
         setLoadingChannelIds((items) => items.filter((item) => item !== id));
     };
 
-    const userChannels = config.channels.filter((channel) => channel.scope !== "system");
+    // 本地版本：隐藏官方 beeftv 渠道（其登录/钱包入口已移除，保留会成为无法连接的空壳）。
+    const userChannels = config.channels.filter(
+        (channel) => channel.scope !== "system" && !isBuiltinBeefTVChannel(channel),
+    );
     useEffect(() => {
         let cancelled = false;
         void fetchPluginProviderCatalog("user.custom-channel")
